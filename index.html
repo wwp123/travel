@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" class="no-js">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="renderer" content="webkit" />
+<meta name="keywords" content=" " />
+<meta name="description" content="" />
+<title>个人主页</title>
+<link href="style/themes.less" rel="stylesheet" type="text/less" />
+<link href="style/layout.css" rel="stylesheet" type="text/css" />
+<link href="style/master.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style/font-awesome.min.css">
+<link href="style/photoGallery.css" rel="stylesheet" type="text/css" />
+<link href="style/swiper.css" rel="stylesheet" type="text/css" />
+<link href="style/animate.min.css" rel="stylesheet" type="text/css" />
+<script src="javascript/less-1.7.3.min.js"></script>
+<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="javascript/vendor/modernizr.js"></script>
+<script src="javascript/es5-shim-2.1.0.min.js"></script>
+</head>
+
+<body>
+	<div id="layout">
+		<div id="frame_wrapper" class="wrapper">
+			<div id="frame_header" class="header row" role="banner" include="include.html">
+				<div id="frame_banner" class="banner">
+					<div class="portrait">
+						<a href="#"><img src="images/portrait.jpg" title="头像" alt="头像" /></a>
+					</div>
+					<div class="name">
+						<a href="#">wp 。oO</a>
+					</div>
+					<div class="address">
+						<span>www.lofter.com</span>
+					</div>
+				</div>
+				<div id="frame_top-bar" class="top-bar">
+					<ul class="top-bar-section">
+						<li>
+							<a href="#">私信</a>
+						</li>
+						<li>
+							<a href="#">归档</a>
+						</li>
+						<li>
+							<a href="#">RSS</a>
+						</li>
+						<li class="has-form">
+							<a class="search-a" href="javascript:;">搜索</a>
+							<div class="search">
+								<div class="fa-back"></div>
+								<form>
+									<input name="" class="inp" id="topsearch" type="text" placeholder="输入搜索内容" accesskey="s" title="输入搜索内容" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN"><span class="fa fa-search" title="搜索"></span>
+								</form>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="frame_main" class="main" role="main">
+				<div class="control-btn">
+					<a href="javascript:;" class="btn-set" title="主页设置"><span class="fa fa fa-wrench fa-fw" aria-hidden="true"></span>主页设置</a>
+					<a href="#" class="btn-home" title="返回首页"><span class="fa fa-home fa-fw" aria-hidden="true"></span>返回首页</a>
+				</div>
+				<div class="row">
+					<ul class="post" id="post">
+						<li class="postitem img-left">
+							<div class="relative">
+							<div class="like-box">
+								<a class="hot" href="article.html" title="热度">
+									<span>1000</span>
+								</a>
+								<a class="comment" href="article.html" title="评论">
+									<span>2</span>
+								</a>
+							</div>
+							<div class="more-box">
+								<span class="circle">&nbsp;</span>
+								<a class="date" href="article.html" title="日期">2012.03.14</a>
+							</div>
+							<div class="info-box info-box-part clearfix">
+								<a class="img" href="javascript:;" title="图片">
+									<img src="images/6597833927237755956.jpg" alt="图片" />
+									<span class="num">2</span>
+								</a>
+								<div class="title">
+									<a href="article.html" title="标题">从简约中领悟品质的真谛</a>
+								</div>
+								<div class="text">
+									<p>有没有那么一件单品、一张照片或一杯暖饮，让你流连忘返、回味无穷？视觉设计，希望悄悄的留住你的视线，带给你唯一却熟悉的感觉…</p>
+								</div>
+							</div>
+							<div class="info-box info-box-all clearfix photoGallery" style="display: none;">
+								<div class="title">
+									<a href="article.html" title="标题">从简约中领悟品质的真谛</a>
+								</div>
+								<ol class="pic-list">
+									<li>
+										<a class="img" href="article.html" title="图片">
+											<img src="images/6597833927237755956.jpg" alt="图片" />
+										</a>
+										<div class="example"><span class="entrance"><span class="fa fa-fw fa-search-plus"></span> 查看大图</span></div>
+									</li>
+									<li>
+										<a class="img" href="article.html" title="图片">
+											<img src="images/1.jpg" alt="图片" />
+										</a>
+										<div class="example"><span class="entrance"><span class="fa fa-fw fa-search-plus"></span> 查看大图</span></div>
+									</li>
+								</ol>
+								<div class="gallery contain-score" id="gallery1">
+									<div class="album">
+										<header>
+											<div class="image-head articlehead">
+												<a href="javascript:void(0)" class="close" title="关闭"></a>
+												<h1 class="pos-title"><a class="current-number"></a><a class="total-number"></a></h1>
+											</div>
+										</header>
+										<div class="swiper-container gallery-top" id="gallery-top1">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="exif-info">
+														<img data-src="images/6597833927237755956.jpg" class="swiper-lazy">
+														<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+														<div class="movie-text">
+															<a href="javascript:void(0)" class="w-cc1 w-cc1-3" title="署名-非商业性使用">署名-非商业性使用</a>
+															<a href="images/1.jpg" class="original" target="_blank" title="查看原图">查看原图></a>
+															<h1>官员实拍黑水直排钱塘江</h1>
+															<div class="wrapper-text">
+																<div id="scroller">
+																	<p>据报道，中一在线微博得到了@浙江环保的回应："您好，您所反映的问题已关注，同时您也可拨打当地环保举报热线，并告知具体方位。"中一在线："既然你@浙江环保收到了，还要我去打你的环保热线吗？什么思路？什么工作套路？"最终，官方回应称已取样水体将加快检测。</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="exif-info">
+														<img data-src="images/1.jpg" class="swiper-lazy">
+														<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+														<div class="movie-text">
+															<a href="javascript:void(0)" class="w-cc1 w-cc1-2" title="署名-非商业性使用">署名-非商业性使用</a>
+															<a href="images/2.jpg" class="original" target="_blank" title="查看原图">查看原图></a>
+															<h1>官员实拍黑水直排钱塘江</h1>
+															<div class="wrapper-text">
+																<div id="scroller">
+																	<p>1962年出生的金中一，是政务微博界、司法界有名的微博达人，@中一在线粉丝数超过130万。在"叫板"环保部门同时，浙江在线记者随后拨通了金中一的电话，事情还要追溯到昨天下午。金中一和家人驱车从江东大桥(钱江九桥)进入杭州大江东产业集聚区，原计划是沿着江岸欣赏风光，然后从钱江隧道返回。"五十多年了我从没去钱塘江对岸走过。"</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-button-next swiper-button-white" title="下一张"></div>
+											<div class="swiper-button-prev swiper-button-white" title="上一张"></div>
+										</div>
+									</div>
+									<div class="handle-tab-wrap">
+										<div class="handle-tab">
+											<ul>
+												<li title="评论" class="comment_list">
+													<a href="javascript:void(0)" class="handle-item"><span class="icon-m icon-comment-m">评论</span></a>
+												</li>
+												<li style="z-index:10;">
+													<a class="handle-item like" href="javascript:void(0)" title="喜欢"><span class="icon-m fa fa-fw fa-heart-o"><span></span><span></span></span>
+													</a>
+												</li>
+												<li title="分享">
+													<a href="javascript:void(0)" class="handle-item handle-tab-share"><span class="icon-m icon-other-m">分享</span></a>
+													<ul class="share-dropdown down">
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon weixin"></span><span>微信</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon yixin"></span><span>易信</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon sina"></span><span>新浪微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon qzone"></span><span>QQ空间</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon baidu"></span><span>百度贴吧</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon reblog"></span><span>我的主页</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon wangyi"></span><span>网易微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon renren"></span><span>人人网</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon tcweibo"></span><span>腾讯微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon qq"></span><span>QQ</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon souhu"></span><span>搜狐微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon kaixin"></span><span>开心网</span></a>
+														</li>
+													</ul>
+												</li>
+												<li title="图片信息">
+													<a href="javascript:void(0)" class="handle-item handle-tab-info"><span class="icon-m icon-reproduced-m">图片信息</span></a>
+													<div class="exif-bg info-dropdown down">
+														<table>
+															<tbody>
+																<tr>
+																	<th>品牌</th>
+																	<td>Canon</td>
+																</tr>
+																<tr>
+																	<th>型号</th>
+																	<td>Canon EOS 600D</td>
+																</tr>
+																<tr>
+																	<th>焦距</th>
+																	<td>50.0 mm</td>
+																</tr>
+																<tr>
+																	<th>光圈</th>
+																	<td>F2.2</td>
+																</tr>
+																<tr>
+																	<th>快门速度</th>
+																	<td>0.02 sec</td>
+																</tr>
+																<tr>
+																	<th>ISO</th>
+																	<td>200</td>
+																</tr>
+																<tr>
+																	<th>曝光补偿</th>
+																	<td>0 EV</td>
+																</tr>
+																<tr>
+																	<th>镜头</th>
+																	<td>
+																		<div class="exifitm" title="EF50mm f/1.4 USM">EF50mm f/1.4 USM</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="photo_layer">
+										<div class="figure-side">
+											<div class="figure-side-wrap">
+												<div class="page-inner">
+													<div class="figure-side-inner">
+														<div class="gradebox"><b>7<sup>.5</sup></b>
+															<p>总分：10</p>
+															<p>我的评分：8</p>
+														</div>
+														<div class="image-head-back">
+															<a href="javascript:void(0)" class="back" title="返回"></a>
+															<h1 class="pos-title"><a class="current-number"></a><a class="total-number"></a></h1>
+														</div>
+														<div class="figure-side-hd">
+															<div class="js-userinfo-ctn">
+																<div class="clear user">
+																	<p class="user-img">
+																		<a target="_blank" href="javascript:void(0)" title="黑糖"> <img width="40" height="40" src="images/head.png"> </a>
+																	</p>
+																	<div class="user-photo-details">
+																		<p class="c_tx3">
+																			<a href="javascript:void(0)" target="_blank">黑糖</a>
+																		</p>
+																		<div class="photo-base-info">
+																			<p class="c_tx3">2015年02月21日 09:33</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="figure_description c_tx2">
+																	<div class="position">我的位置：福州市鼓楼区软件大道A区15幢</div>
+																</div>
+															</div>
+														</div>
+														<div class="mod_comments">
+															<div class="comments_list">
+																<div id="wrapper">
+																	<div id="scroller">
+																		<div class="a-isaym2 a-isaym2-do">
+																			<div class="m-cmt">
+																				<div class="a-show a-show-cmtul a-show-do">
+																					<div class="praise clearfix">
+																						<p class="clearfix">
+																							<a class="font-primary">哆啦A梦</a>、
+																							<a class="font-primary">哆啦A梦</a>等10人觉得很赞
+																					</div>
+																					<ul class="replay-list">
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="isayi xtag" style="display:none;">
+																				<div class="more">
+																					<div class="w-load">正在载入中...</div>
+																				</div>
+																			</div>
+																			<!--<div class="isayi"><a class="w-more2 xtag" href="javascript:void(0)" onclick="aDd(this)"><span>查看更多</span></a></div>-->
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="figure-comment">
+												<div class="sub-score-wrap">
+													<div class="input-layout" contenteditable="true">
+														<span class="placeholder">回复&nbsp;哆啦A梦：</span>二妹子应！！！
+														<input class="placeholder hide" type="text" name="comment" placeholder="" value="二妹子应！！！">
+													</div>
+													<div class="sub-score">
+														<span href="#" class="button right">提交</span>
+														<div class="raty" id="raty-container">
+															<div class="left">评分：</div>
+															<div class="left" id="raty" data-number="5" data-path="images/raty"></div>
+															<div class="raty-wrap">
+																<div class="left">唯美：</div>
+																<div class="left" id="raty1" data-number="5" data-path="images/raty"></div>
+																<div class="left">题材：</div>
+																<div class="left" id="raty2" data-number="5" data-path="images/raty"></div>
+																<div class="left">像素：</div>
+																<div class="left" id="raty3" data-number="5" data-path="images/raty"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="text">
+									<p>有没有那么一件单品、一张照片、一副美景或一杯暖饮，让你流连忘返、回味无穷？视觉设计，希望悄悄的留住你的视线，带给你唯一却熟悉的感觉…</p>
+								</div>
+								<a href="javascript:;" class="btn">收起<span class="fa fa-angle-up" aria-hidden="true"></span></a>
+							</div>
+							</div>
+						</li>
+						<li class="postitem  img-top">
+							<div class="relative">
+							<div class="like-box">
+								<a class="hot" href="article.html" title="热度">
+									<span>1000</span>
+								</a>
+							</div>
+							<div class="more-box">
+								<span class="circle">&nbsp;</span>
+								<a class="date" href="article.html" title="日期">2012.03.14</a>
+							</div>
+							<div class="info-box info-box-part clearfix">
+								<a class="img" href="javascript:;" title="图片">
+									<img src="images/1.jpg" alt="图片" />
+									<span class="num">3</span>
+								</a>
+								<div class="title">
+									<a href="article.html" title="标题">从简约中领悟品质的真谛</a>
+								</div>
+								<div class="text">
+									<p>有没有那么一件单品、一张照片、一副美景或一杯暖饮，让你流连忘返、回味无穷？视觉设计，希望悄悄的留住你的视线，带给你唯一却熟悉的感觉…</p>
+								</div>
+							</div>
+							<div class="info-box info-box-all clearfix photoGallery" style="display: none;">
+								<div class="title">
+									<a href="article.html" title="标题">从简约中领悟品质的真谛</a>
+								</div>
+								<ol class="pic-list">
+									<li>
+										<a class="img" href="article.html" title="图片">
+											<img src="images/1.jpg" alt="图片" />
+										</a>
+										<div class="example"><span class="entrance"><span class="fa fa-fw fa-search-plus"></span> 查看大图</span></div>
+									</li>
+									<li>
+										<a class="img" href="article.html" title="图片">
+											<img src="images/6597833927237755956.jpg" alt="图片" />
+										</a>
+										<div class="example"><span class="entrance"><span class="fa fa-fw fa-search-plus"></span> 查看大图</span></div>
+									</li>
+									<li>
+										<a class="img" href="article.html" title="图片">
+											<img src="images/1108448458303424620.png" alt="图片" />
+										</a>
+										<div class="example"><span class="entrance"><span class="fa fa-fw fa-search-plus"></span> 查看大图</span></div>
+									</li>
+								</ol>
+								<div class="gallery contain-score" id="gallery2">
+									<div class="album">
+										<header>
+											<div class="image-head articlehead">
+												<a href="javascript:void(0)" class="close" title="关闭"></a>
+												<h1 class="pos-title"><a class="current-number"></a><a class="total-number"></a></h1>
+											</div>
+										</header>
+										<div class="swiper-container gallery-top" id="gallery-top2">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="exif-info">
+														<img data-src="images/1.jpg" class="swiper-lazy">
+														<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+														<div class="movie-text">
+															<a href="javascript:void(0)" class="w-cc1 w-cc1-3" title="署名-非商业性使用">署名-非商业性使用</a>
+															<a href="images/1.jpg" class="original" target="_blank" title="查看原图">查看原图></a>
+															<h1>22222222222</h1>
+															<div class="wrapper-text">
+																<div id="scroller">
+																	<p>33333333333333333333333333333333333333333333333333333333333333</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="exif-info">
+														<img data-src="images/6597833927237755956.jpg" class="swiper-lazy">
+														<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+														<div class="movie-text">
+															<a href="javascript:void(0)" class="w-cc1 w-cc1-2" title="署名-非商业性使用">署名-非商业性使用</a>
+															<a href="images/6597833927237755956.jpg" class="original" target="_blank" title="查看原图">查看原图></a>
+															<h1>2222222222222</h1>
+															<div class="wrapper-text">
+																<div id="scroller">
+																	<p>666666666666666666666666666666666666666666666666666666666666666666666666666666666666666</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="exif-info">
+														<img data-src="images/1108448458303424620.png" class="swiper-lazy">
+														<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+														<div class="movie-text">
+															<a href="javascript:void(0)" class="w-cc1 w-cc1-2" title="署名-非商业性使用">署名-非商业性使用</a>
+															<a href="images/1108448458303424620.png" class="original" target="_blank" title="查看原图">查看原图></a>
+															<h1>222222222222</h1>
+															<div class="wrapper-text">
+																<div id="scroller">
+																	<p>88888888888888888888888888888888888888888</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-button-next swiper-button-white" title="下一张"></div>
+											<div class="swiper-button-prev swiper-button-white" title="上一张"></div>
+										</div>
+									</div>
+									<div class="handle-tab-wrap">
+										<div class="handle-tab">
+											<ul>
+												<li title="评论" class="comment_list">
+													<a href="javascript:void(0)" class="handle-item"><span class="icon-m icon-comment-m">评论</span></a>
+												</li>
+												<li style="z-index:10;">
+													<a class="handle-item like" href="javascript:void(0)" title="喜欢"><span class="icon-m fa fa-fw fa-heart-o"><span></span><span></span></span>
+													</a>
+												</li>
+												<li title="分享">
+													<a href="javascript:void(0)" class="handle-item handle-tab-share"><span class="icon-m icon-other-m">分享</span></a>
+													<ul class="share-dropdown down">
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon weixin"></span><span>微信</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon yixin"></span><span>易信</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon sina"></span><span>新浪微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon qzone"></span><span>QQ空间</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon baidu"></span><span>百度贴吧</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon reblog"></span><span>我的主页</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon wangyi"></span><span>网易微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon renren"></span><span>人人网</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon tcweibo"></span><span>腾讯微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon qq"></span><span>QQ</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon souhu"></span><span>搜狐微博</span></a>
+														</li>
+														<li>
+															<a href="javascript:void(0)"><span class="share-icon kaixin"></span><span>开心网</span></a>
+														</li>
+													</ul>
+												</li>
+												<li title="图片信息">
+													<a href="javascript:void(0)" class="handle-item handle-tab-info"><span class="icon-m icon-reproduced-m">图片信息</span></a>
+													<div class="exif-bg info-dropdown down">
+														<table>
+															<tbody>
+																<tr>
+																	<th>品牌</th>
+																	<td>Canon</td>
+																</tr>
+																<tr>
+																	<th>型号</th>
+																	<td>Canon EOS 600D</td>
+																</tr>
+																<tr>
+																	<th>焦距</th>
+																	<td>50.0 mm</td>
+																</tr>
+																<tr>
+																	<th>光圈</th>
+																	<td>F2.2</td>
+																</tr>
+																<tr>
+																	<th>快门速度</th>
+																	<td>0.02 sec</td>
+																</tr>
+																<tr>
+																	<th>ISO</th>
+																	<td>200</td>
+																</tr>
+																<tr>
+																	<th>曝光补偿</th>
+																	<td>0 EV</td>
+																</tr>
+																<tr>
+																	<th>镜头</th>
+																	<td>
+																		<div class="exifitm" title="EF50mm f/1.4 USM">EF50mm f/1.4 USM</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="photo_layer">
+										<div class="figure-side">
+											<div class="figure-side-wrap">
+												<div class="page-inner">
+													<div class="figure-side-inner">
+														<div class="gradebox"><b>7<sup>.5</sup></b>
+															<p>总分：10</p>
+															<p>我的评分：8</p>
+														</div>
+														<div class="image-head-back">
+															<a href="javascript:void(0)" class="back" title="返回"></a>
+															<h1 class="pos-title"><a class="current-number"></a><a class="total-number"></a></h1>
+														</div>
+														<div class="figure-side-hd">
+															<div class="js-userinfo-ctn">
+																<div class="clear user">
+																	<p class="user-img">
+																		<a target="_blank" href="javascript:void(0)" title="黑糖"> <img width="40" height="40" src="images/head.png"> </a>
+																	</p>
+																	<div class="user-photo-details">
+																		<p class="c_tx3">
+																			<a href="javascript:void(0)" target="_blank">黑糖</a>
+																		</p>
+																		<div class="photo-base-info">
+																			<p class="c_tx3">2015年02月21日 09:33</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="figure_description c_tx2">
+																	<div class="position">我的位置：福州市鼓楼区软件大道A区15幢</div>
+																</div>
+															</div>
+														</div>
+														<div class="mod_comments">
+															<div class="comments_list">
+																<div id="wrapper">
+																	<div id="scroller">
+																		<div class="a-isaym2 a-isaym2-do">
+																			<div class="m-cmt">
+																				<div class="a-show a-show-cmtul a-show-do">
+																					<div class="praise clearfix">
+																						<p class="clearfix">
+																							<a class="font-primary">哆啦A梦</a>、
+																							<a class="font-primary">哆啦A梦</a>等10人觉得很赞
+																					</div>
+																					<ul class="replay-list">
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star"></span>
+																								<span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																						<li class="clearfix">
+																							<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a>
+																							<p class="clearfix">
+																								<a class="font-primary">哆啦A梦</a>
+																								<span class="replay-grade right ">
+                            <span class="fa fa-star-half-full"></span>
+																								</span>
+																							</p>
+																							<p class="replay-con">确实没有1好，不过承上启下之作也正常啦
+																								<a class="font-primary right">回复</a>
+																								<a class="show-hover font-primary margin-r right">加黑</a>
+																							</p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>分分钟拜倒在女巫的降龙十八掌下<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>真好听！<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic02.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">大雄</a>回复了<a class="font-primary">哆啦A梦</a>只是为了看看特效…中间差点睡着了…<a class="font-primary right">回复</a></span></p>
+																							<p class="replay-con clearfix">
+																								<a class="left"><img class="user-photo s2" src="images/pic01.jpg" title=""></a><span class="reply-con-list"><a class="font-primary">哆啦A梦</a>回复了<a class="font-primary">大雄</a>打的挺热闹。。。故事没看太明白！3DIMAX看的也没啥感觉了，头想靠椅背上画面就虚了。。。看的较比累。。。。<a class="font-primary right">回复</a></span></p>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="isayi xtag" style="display:none;">
+																				<div class="more">
+																					<div class="w-load">正在载入中...</div>
+																				</div>
+																			</div>
+																			<!--<div class="isayi"><a class="w-more2 xtag" href="javascript:void(0)" onclick="aDd(this)"><span>查看更多</span></a></div>-->
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="figure-comment">
+												<div class="sub-score-wrap">
+													<div class="input-layout" contenteditable="true">
+														<span class="placeholder">回复&nbsp;哆啦A梦：</span>二妹子应！！！
+														<input class="placeholder hide" type="text" name="comment" placeholder="" value="二妹子应！！！">
+													</div>
+													<div class="sub-score">
+														<span href="#" class="button right">提交</span>
+														<div class="raty" id="raty-container">
+															<div class="left">评分：</div>
+															<div class="left" id="raty" data-number="5" data-path="images/raty"></div>
+															<div class="raty-wrap">
+																<div class="left">唯美：</div>
+																<div class="left" id="raty1" data-number="5" data-path="images/raty"></div>
+																<div class="left">题材：</div>
+																<div class="left" id="raty2" data-number="5" data-path="images/raty"></div>
+																<div class="left">像素：</div>
+																<div class="left" id="raty3" data-number="5" data-path="images/raty"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="text">
+									<p>有没有那么一件单品、一张照片、一副美景或一杯暖饮，让你流连忘返、回味无穷？视觉设计，希望悄悄的留住你的视线，带给你唯一却熟悉的感觉…</p>
+								</div>
+								<a href="javascript:;" class="btn">收起<span class="fa fa-angle-up" aria-hidden="true"></span></a>
+							</div>
+							</div>
+						</li>
+						<!--<li class="postitem img-top">
+							<div class="relative">
+							<div class="like-box">
+								<a class="hot" href="article.html" title="热度">
+									<span>1000</span>
+								</a>
+							</div>
+							<div class="more-box">
+								<span class="circle">&nbsp;</span>
+								<a class="date" href="article.html" title="日期">2012.03.14</a>
+							</div>
+							<div class="info-box">
+								<a class="img" href="article.html" title="图片">
+									<img src="images/1108448458303424620.png" alt="图片" />
+								</a>
+								<div class="title">
+									<a href="article.html" title="标题">从简约中领悟品质的真谛</a>
+								</div>
+								<div class="text">
+									<p>没有文字，多么孤单</p>
+								</div>
+							</div>
+							</div>
+						</li>
+						<li class="postitem">
+							<div class="relative">
+							<div class="like-box">
+								<a class="hot" href="article.html" title="热度">
+									<span>1000</span>
+								</a>
+							</div>
+							<div class="more-box">
+								<span class="circle">&nbsp;</span>
+								<a class="date" href="article.html" title="日期">2012.03.14</a>
+							</div>
+							<div class="info-box">
+								<div class="text">
+									<p>有这么一些人，喜欢拍点什么，写日志总是想不到标题，拍了一堆相片，不知如何组成一个文章，不知如何或者不想加上一些修饰就发布上来……</p>
+									<p>他们生活随&nbsp;意，常常需要在工作台上贴上一些黄色的小纸条来提醒自己杂乱的工作，这时，真的需要一个LOFTER，也来参与一下热闹的互联网，微博你玩不起来，博客想&nbsp;不到主题，不知道如何发布组图也不想发布，你也不知道如何组织文字和整理思路，但是你有一堆的好作品或者一堆好相片，也想在大伙里路过一下，让大伙转过头&nbsp;来注意一下你……</p>
+									<p>于是LOFTER遇上了你，你遇上了LOFTER</p>
+								</div>
+							</div>
+							</div>
+						</li>
+						<li class="postitem img-left">
+							<div class="relative">
+							<div class="like-box">
+								<a class="hot" href="article.html" title="热度">
+									<span>1000</span>
+								</a>
+							</div>
+							<div class="more-box">
+								<span class="circle">&nbsp;</span>
+								<a class="date" href="article.html" title="日期">2012.03.14</a>
+							</div>
+							<div class="info-box clearfix">
+								<div class="title">
+									<a href="article.html" title="标题">从简约中领悟品质的真谛</a>
+								</div>
+								<a class="img" href="article.html" title="图片">
+									<img src="images/6597833927237755956.jpg" alt="图片" />
+								</a>
+								<div class="text">
+									<p>有没有那么一件单品、一张照片、一副美景或一杯暖饮，让你流连忘返、回味无穷？视觉设计，希望悄悄的留住你的视线，带给你唯一却熟悉的感觉…</p>
+								</div>
+							</div>
+							</div>
+						</li>
+						<li class="postitem img-top">
+							<div class="relative">
+							<div class="like-box">
+								<a class="hot" href="article.html" title="热度">
+									<span>1000</span>
+								</a>
+							</div>
+							<div class="more-box">
+								<span class="circle">&nbsp;</span>
+								<a class="date" href="article.html" title="日期">2012.03.14</a>
+							</div>
+							<div class="info-box">
+								<a class="img" href="article.html" title="图片">
+									<img src="images/1108448458303424620.png" alt="图片" />
+								</a>
+								<div class="text">
+									<p>没有文字，多么孤单</p>
+								</div>
+							</div>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+				<!--数据模板标识func:分页page-->
+                <div class="pages" id="data_page_1" func="page">
+                    <ul class="clearfix">
+                    	<li><a class="pre" href="#">←</a></li>
+                    	<li><a class="num" href="#">1</a></li>
+                    	<li><a class="all" href="#">/ 3</a></li>
+                    	<li><a class="next" href="#">→</a></li>
+                    </ul>
+                </div>
+			</div>
+			<div id="frame_footer" class="footer" role="contentinfo" include="include.html">
+				<div class="copyright">
+					&copy;&nbsp;<a href="index.html">wp 。oO</a>&nbsp;|&nbsp;Powered by <a href="#">XYZ</a>
+				</div>
+			</div>
+			<div id="frame_javascript">
+				<script src="javascript/others.js"></script>
+				<script src="javascript/jquery.raty.js" type="text/javascript"></script>
+				<script src="javascript/iscroll.js" type="text/javascript"></script>
+				<script src="javascript/swiper.min.js" type="text/javascript"></script>
+				<script src="javascript/photoGallery.js" type="text/javascript"></script>
+				<script src="javascript/api.js" type="text/javascript"></script>
+      			<script src="javascript/foundation.min.js"></script> 
+				<script>
+					$(document).foundation();
+					$('.postitem').each(function(){
+						var $part = $(this).find('.info-box-part');
+						var $all = $(this).find('.info-box-all');
+						$part.find('.img').on('click', function() {
+							$part.hide();
+							$all.show();
+						});
+						$all.find('.btn').on('click', function() {
+							$part.show();
+							$all.hide();
+						});
+					});
+					
+				</script>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
